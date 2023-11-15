@@ -1,0 +1,2208 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>
+        Screener | KLSE Screener
+    </title>
+    <link href="/v2/img/favicon_v2.ico" type="image/x-icon" rel="icon"><link href="/v2/img/favicon_v2.ico" type="image/x-icon" rel="shortcut icon"><link rel="stylesheet" type="text/css" href="//cdn.klsescreener.com/v2/css/chosen.min.css">    <link rel="apple-touch-icon" href="/v2/img/apple-touch-icon.png">
+    <script src="https://connect.facebook.net/en_US/sdk.js?hash=0abc703cda58366f3ea2cdf760f0a238" async="" crossorigin="anonymous"></script><script id="facebook-jssdk" src="//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.8&amp;appId=690278390997228"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-CZ4H48XTSJ&amp;l=dataLayer&amp;cx=c"></script><script src="https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202311090101/show_ads_impl.js" id="google_shimpl"></script><script async="" src="https://www.google-analytics.com/analytics.js"></script><script>
+        var $base_url = '/v2/';
+    </script>
+        <meta name="keywords" content="bursascreener, bursa screener, bursa malaysia, bursa, klse, kuala lumpur stock exchange, stock exchange, kuala lumpur, stock screener, screener, technical analysis, technical, analysis, research">
+            <meta property="og:image" content="https://www.klsescreener.com/v2/img/icon_og-image.png">
+        <meta property="og:title" content="Screener">
+            <meta name="description" content="Analyse Malaysia stock market better ever. Access everywhere. Available in Google Play Store and App Store!">
+        <meta property="og:description" content="Analyse Malaysia stock market better ever. Access everywhere. Available in Google Play Store and App Store!">
+        <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.klsescreener.com/v2/">
+    <!--
+    <meta property="og:description" content="">
+    -->
+    <meta property="og:site_name" content="KLSE Screener">
+    <meta property="fb:app_id" content="690278390997228">
+    <meta property="fb:pages" content="143760695752177">
+
+    <meta property="al:ios:app_store_id" content="593048150">
+    <meta property="al:ios:app_name" content="KLSE Screener">
+    <meta property="al:ios:url" content="https://www.klsescreener.com/v2/">
+
+    <meta property="al:android:package" content="net.neobie.klse">
+    <meta property="al:android:app_name" content="KLSE Screener (Bursa)">
+
+    
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <!-- <script src="//selectize.github.io/selectize.js/js/selectize.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.13.3/js/standalone/selectize.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.4/js.cookie.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/floatthead/2.1.4/jquery.floatThead.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/autosize.js/4.0.0/autosize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@16.0.0/dist/lazyload.min.js"></script>
+    <script>
+        var lazyLoadInstance = new LazyLoad({
+            elements_selector: ".lazy"
+            // ... more custom settings?
+        });
+    </script>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/alertifyjs@1.11.4/build/alertify.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alertifyjs@1.11.4/build/css/alertify.min.css">
+    <!-- Default theme -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alertifyjs@1.11.4/build/css/themes/default.css">
+
+    <!--Material-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <!--
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    -->
+
+
+    <!--bootstrap select-->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.10/css/bootstrap-select.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+    <!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>-->
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.10/js/bootstrap-select.min.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootbox@5.3.0/bootbox.all.min.js"></script>
+
+    <!-- <link href="https://selectize.dev/css/selectize.default.css" rel="stylesheet" />
+    <link href="https://selectize.dev/css/selectize.bootstrap4.css" rel="stylesheet" /> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.13.3/css/selectize.default.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.13.3/css/selectize.bootstrap4.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:400,700">
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/flick/jquery-ui.css" type="text/css" media="all">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0/css/bootstrap.min.css" rel="stylesheet" /> -->
+    <!--
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    -->
+
+    <!-- Optional theme -->
+    <!--
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    -->
+
+    <!-- Latest compiled and minified JavaScript -->
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js" type="text/javascript"></script>
+        <script type="text/javascript" src="//cdn.klsescreener.com/v2/js/chosen.jquery.min.js"></script>    <script type="text/javascript" src="//cdn.klsescreener.com/v2/js/stupidtable.min.js"></script>    <script type="text/javascript" src="//cdn.klsescreener.com/v2/js/autogrow.min.js"></script>    <script type="text/javascript" src="//cdn.klsescreener.com/v2/js/jquery.mentionsInput.js"></script>    <script type="text/javascript" src="//cdn.klsescreener.com/v2/js/jquery.elastic.js"></script>    <script type="text/javascript" src="//cdn.klsescreener.com/v2/js/jquery.events.input.js"></script>    <script type="text/javascript" src="https://zurb.github.io/tribute/example/tribute.js"></script>
+    <script type="text/javascript" src="//cdn.klsescreener.com/v2/js/main.js?16466688000"></script>    <script type="text/javascript" src="//cdn.klsescreener.com/v2/js/post.js?16830432000"></script>    <script type="text/javascript" src="//cdn.klsescreener.com/v2/js/attachment.js?16256736000"></script>    <script type="text/javascript" src="//cdn.klsescreener.com/v2/js/social.js?16226496001"></script>        <link rel="stylesheet" type="text/css" href="//cdn.klsescreener.com/v2/css/style.css?1672934400.0">            <link rel="stylesheet" id="bootstrap-dark" href="/v2/css/flatly/main.css?1" type="text/css" media="screen">
+        <link rel="stylesheet" type="text/css" href="//cdn.klsescreener.com/v2/css/zaker.css?1586016000.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet" type="text/css">
+
+    <script crossorigin="" src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin="" src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyBq8yhB4TXonfubqQ8WDb04kmv3-wER2wo",
+            authDomain: "api-project-30333546014.firebaseapp.com",
+            databaseURL: "https://api-project-30333546014.firebaseio.com",
+            projectId: "api-project-30333546014",
+            storageBucket: "api-project-30333546014.appspot.com",
+            messagingSenderId: "30333546014",
+            appId: "1:30333546014:web:4c7821f3621fa2d40cc80f"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script>
+        //alertify.set({transition:''});
+        toastr.options = {
+            "positionClass": "toast-bottom-right",
+        }
+        toastr.options.newestOnTop = false;
+    </script>
+    <script>
+        $(document).ready(function() {
+
+            var contact_container = $(".contact_container");
+            var contact_form = contact_container.find("form");
+
+            $(".contact_container > .close_button").click(function() {
+                contact_container.hide();
+            })
+
+
+            contact_form.submit(function() {
+                $.post("/v2/../contact.php", $(this).serialize(), function(data) {
+                    if (data == "SUCCESS") {
+                        contact_container.html("Suggestion submitted.").fadeTo(5000, 0, function() {
+                            $("#suggestion").dropdown('toggle');
+                            $(this).css("opacity", 1);
+                        });
+
+                    } else if (data == "INCOMPLETE") {
+                        contact_container.find(".suggestion_message").html("Incomplete form cannot be sent.");
+                    } else if (data == "ERROR") {
+                        contact_container.find(".suggestion_message").html("Error on sending mail.");
+                    } else if (data == "INVALID_EMAIL") {
+                        contact_container.find(".suggestion_message").html("Invalid E-mail.");
+                    } else {
+                        contact_container.find(".suggestion_message").html("Failed to send feedback.");
+                    }
+                });
+                return false;
+            });
+        });
+
+        $(function() {
+
+            $("#searchquote").focus(function() {
+                $(".autocomplete-navbar").show();
+            });
+            $("#searchquote").autocomplete({
+                    delay: 500,
+                    classes: {
+                        "ui-autocomplete": "ui-autocomplete-fixed autocomplete-navbar"
+                    },
+                    search: function(event, ui) {
+                        $("#quote_loading").html("<span class='fa fa-spinner fa-spin'></span>");
+                    },
+                    open: function(event, ui) {
+                        $(this).autocomplete('widget').css('z-index', 1100);
+                        $("#quote_loading").html("");
+                    },
+                    close: function(event, ui) {
+                        //$("#quote_loading").html("");
+                    },
+                    response: function(event, ui) {
+                        if (ui.content.length == 0) {
+                            $("#quote_loading").html("");
+                        } else {
+                            $("#quote_loading").html("");
+                        }
+                    },
+                    source: "/v2/stocks/all.json",
+                    minLength: 2,
+                    select: function(event, ui) {
+                        if (ui.item.desc != null) {
+                            window.location = "/v2/stocks/view/" + ui.item.value + "/" + ui.item.desc.slug();
+                        } else {
+                            window.location = "/v2/stocks/view/" + ui.item.value;
+                        }
+                        //window.location = "/v2/../detail.php?code=" + ui.item.value;
+                    }
+                })
+                .autocomplete("instance")._renderItem = function(ul, item) {
+                    return $("<li>")
+                        .append("<div class='search-item'><span>" + item.label + "</span><br/><span class='text-muted small'>" + item.value + "</span><span style='float:right' class='" + (item.price_change > 0 ? "increasing" : item.price_change < 0 ? "decreasing" : "") + "'>" + item.price + "</span></div>")
+                        .appendTo(ul);
+                };
+            console.log($("#searchquote").autocomplete().data() + "hey");
+            /** who this belongs to and cause js error ???? 2016-11-29
+        .autocomplete('widget').addClass('ui-autocomplete-fixed').data("ui-autocomplete")._renderItem = function( ul, item ) {
+            if (item.desc == null) item.desc = " ";
+        return $("<li></li>")
+            .append( "<a><div>" + item.label + "</div><div class='stock-description'>" + item.desc + "</div></a>" )
+            .appendTo( ul );
+        };
+             **/
+            ;
+
+            /*
+            $( "#searchquote" ).focus( function() {
+            	if ( $(this).val() == "Search stock" ) {
+            		$(this).val("");
+            		$(this).css("color","black");
+            	}
+            });
+            $( "#searchquote" ).blur( function() {
+            	if ( $(this).val() == "" ) {
+            		$(this).val("Search stock");
+            		$(this).css("color","grey");
+            	}
+            });
+            */
+        });
+
+        $(document).ready(function() {
+            return;
+            var content_wrapper = $("#content > div");
+            var skyscraper = $("#ad_responsive");
+            var offset = 20;
+            var posLeft = content_wrapper.width() + content_wrapper.offset().left + offset;
+
+            //if ( content_wrapper.height() >= 600 && content_wrapper.width() <= 1000 && $(document).width() >= content_wrapper.offset().left + content_wrapper.width() + skyscraper.width() + offset ) {
+            skyscraper.css("position", "absolute")
+                .offset({
+                    top: content_wrapper.offset().top,
+                    left: posLeft
+                })
+                //.offset({top:content_wrapper.offset().top, left: $(document).width() - skyscraper.width() - ( $(document).width() - wrapper_content.width() ) / 2 })
+                .show();
+            //$("#skyscraper").sticky({topSpacing:160});
+            //} else {
+            //skyscraper.remove();
+            //}
+
+            var offsetTop = 30;
+            var offsetBottom = 30;
+
+            $(window).scroll(function() { // scroll event
+                var windowTop = $(window).scrollTop(); // returns number
+                var windowLeft = $(window).scrollLeft();
+
+                /**
+                if ( skyscraper.offset().top >= content_wrapper.offset().top && (skyscraper.offset().top + skyscraper.height()) <= (content_wrapper.offset().top + content_wrapper.height()) ) {
+                	skyscraper.offset({ top:windowTop + offsetTop });
+                	//skyscraper.css('position', 'fixed');
+                }
+                if ( skyscraper.offset().top < content_wrapper.offset().top ) {
+                	skyscraper.offset({top:content_wrapper.offset().top});
+                	//skyscraper.css('position', 'absolute');
+                }
+                if ( skyscraper.offset().top + skyscraper.height() > content_wrapper.offset().top + content_wrapper.height()) {
+                	skyscraper.offset({top: content_wrapper.offset().top + content_wrapper.height() - skyscraper.height() });
+                	//skyscraper.css('position', 'absolute');
+                }
+                **/
+
+
+                /**
+			if ( windowTop + offsetTop > content_wrapper.offset().top && windowTop + offsetTop + skyscraper.height() < content_wrapper.offset().top + content_wrapper.height() ) {
+				skyscraper.css('position', 'fixed');
+				skyscraper.css('top', offsetTop );
+				skyscraper.css('left', posLeft - windowLeft);
+
+			}
+
+			if ( windowTop + offsetTop < content_wrapper.offset().top ) {
+				skyscraper.css('position', 'absolute');
+				skyscraper.css('top', content_wrapper.offset().top );
+				skyscraper.css('left', posLeft);
+			}
+
+			if ( windowTop + offsetTop + skyscraper.height() > content_wrapper.offset().top + content_wrapper.height() ) {
+				skyscraper.css('position', 'absolute');
+				skyscraper.css('top', content_wrapper.offset().top + content_wrapper.height() - skyscraper.height() );
+				skyscraper.css('left', posLeft);
+			}
+			**/
+            });
+
+        })
+
+        $(function() {
+            $('.contact_container').click(function(e) {
+                e.stopPropagation();
+            });
+        })
+    </script>
+    <script type="text/javascript">
+        // window.smartlook||(function(d) {
+        //     var o=smartlook=function(){ o.api.push(arguments)},s=d.getElementsByTagName('script')[0];
+        //     var c=d.createElement('script');o.api=new Array();c.async=true;c.type='text/javascript';
+        //     c.charset='utf-8';c.src='//rec.getsmartlook.com/bundle.js';s.parentNode.insertBefore(c,s);
+        // })(document);
+        // smartlook('init', '921a42a437a7053aa25ac2ed392a5181864cfaa5');
+    </script>
+            <script>
+            (function(i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function() {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+            ga('create', 'UA-26069580-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-26069580-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'UA-26069580-1');
+        </script>
+        
+    <!--
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-3964569253220025",
+            enable_page_level_ads: true
+        });
+    </script>
+    -->
+
+<meta http-equiv="origin-trial" content="As0hBNJ8h++fNYlkq8cTye2qDLyom8NddByiVytXGGD0YVE+2CEuTCpqXMDxdhOMILKoaiaYifwEvCRlJ/9GcQ8AAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3MTk1MzI3OTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="AgRYsXo24ypxC89CJanC+JgEmraCCBebKl8ZmG7Tj5oJNx0cmH0NtNRZs3NB5ubhpbX/bIt7l2zJOSyO64NGmwMAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3MTk1MzI3OTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="A/ERL66fN363FkXxgDc6F1+ucRUkAhjEca9W3la6xaLnD2Y1lABsqmdaJmPNaUKPKVBRpyMKEhXYl7rSvrQw+AkAAACNeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MTkzNTk5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A6OdGH3fVf4eKRDbXb4thXA4InNqDJDRhZ8U533U/roYjp4Yau0T3YSuc63vmAs/8ga1cD0E3A7LEq6AXk1uXgsAAACTeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MTkzNTk5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="As0hBNJ8h++fNYlkq8cTye2qDLyom8NddByiVytXGGD0YVE+2CEuTCpqXMDxdhOMILKoaiaYifwEvCRlJ/9GcQ8AAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3MTk1MzI3OTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="AgRYsXo24ypxC89CJanC+JgEmraCCBebKl8ZmG7Tj5oJNx0cmH0NtNRZs3NB5ubhpbX/bIt7l2zJOSyO64NGmwMAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3MTk1MzI3OTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="A/ERL66fN363FkXxgDc6F1+ucRUkAhjEca9W3la6xaLnD2Y1lABsqmdaJmPNaUKPKVBRpyMKEhXYl7rSvrQw+AkAAACNeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MTkzNTk5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A6OdGH3fVf4eKRDbXb4thXA4InNqDJDRhZ8U533U/roYjp4Yau0T3YSuc63vmAs/8ga1cD0E3A7LEq6AXk1uXgsAAACTeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MTkzNTk5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="AymqwRC7u88Y4JPvfIF2F37QKylC04248hLCdJAsh8xgOfe/dVJPV3XS3wLFca1ZMVOtnBfVjaCMTVudWM//5g4AAAB7eyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjk1MTY3OTk5LCJpc1RoaXJkUGFydHkiOnRydWV9"><style type="text/css" data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget css:fb.css.customer_chat_plugin_iframe">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:'lucida grande', tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:'lucida grande', tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://connect.facebook.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://connect.facebook.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://connect.facebook.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://connect.facebook.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://connect.facebook.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://connect.facebook.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://connect.facebook.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}
+.fb_mpn_mobile_landing_page_slide_out{animation-duration:200ms;animation-name:fb_mpn_landing_page_slide_out;transition-timing-function:ease-in}.fb_mpn_mobile_landing_page_slide_out_from_left{animation-duration:200ms;animation-name:fb_mpn_landing_page_slide_out_from_left;transition-timing-function:ease-in}.fb_mpn_mobile_landing_page_slide_up{animation-duration:500ms;animation-name:fb_mpn_landing_page_slide_up;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_in{animation-duration:300ms;animation-name:fb_mpn_bounce_in;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_out{animation-duration:300ms;animation-name:fb_mpn_bounce_out;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_out_v2{animation-duration:300ms;animation-name:fb_mpn_fade_out;transition-timing-function:ease-in}.fb_customer_chat_bounce_in_v2{animation-duration:300ms;animation-name:fb_bounce_in_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_in_from_left{animation-duration:300ms;animation-name:fb_bounce_in_from_left;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_v2{animation-duration:300ms;animation-name:fb_bounce_out_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_from_left{animation-duration:300ms;animation-name:fb_bounce_out_from_left;transition-timing-function:ease-in}.fb_invisible_flow{display:inherit;height:0;overflow-x:hidden;width:0}@keyframes fb_mpn_landing_page_slide_out{0%{margin:0 12px;width:100% - 24px}60%{border-radius:18px}100%{border-radius:50%;margin:0 24px;width:60px}}@keyframes fb_mpn_landing_page_slide_out_from_left{0%{left:12px;width:100% - 24px}60%{border-radius:18px}100%{border-radius:50%;left:12px;width:60px}}@keyframes fb_mpn_landing_page_slide_up{0%{bottom:0;opacity:0}100%{bottom:24px;opacity:1}}@keyframes fb_mpn_bounce_in{0%{opacity:.5;top:100%}100%{opacity:1;top:0}}@keyframes fb_mpn_fade_out{0%{bottom:30px;opacity:1}100%{bottom:0;opacity:0}}@keyframes fb_mpn_bounce_out{0%{opacity:1;top:0}100%{opacity:.5;top:100%}}@keyframes fb_bounce_in_v2{0%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}50%{transform:scale(1.03, 1.03);transform-origin:bottom right}100%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}}@keyframes fb_bounce_in_from_left{0%{opacity:0;transform:scale(0, 0);transform-origin:bottom left}50%{transform:scale(1.03, 1.03);transform-origin:bottom left}100%{opacity:1;transform:scale(1, 1);transform-origin:bottom left}}@keyframes fb_bounce_out_v2{0%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}100%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}}@keyframes fb_bounce_out_from_left{0%{opacity:1;transform:scale(1, 1);transform-origin:bottom left}100%{opacity:0;transform:scale(0, 0);transform-origin:bottom left}}@keyframes slideInFromBottom{0%{opacity:.1;transform:translateY(100%)}100%{opacity:1;transform:translateY(0)}}@keyframes slideInFromBottomDelay{0%{opacity:0;transform:translateY(100%)}97%{opacity:0;transform:translateY(100%)}100%{opacity:1;transform:translateY(0)}}</style></head>
+
+<body id="Screener-quote">
+
+    <div style="height: auto !important;">
+        <!--class="container-fluid"-->
+        
+
+    <nav class="navbar navbar-expand-md sticky-top navbar-dark bg-primary" style="padding: 0.1rem 1rem;">
+
+<!--        <div class="container-fluid">-->
+
+
+            <a class="navbar-brand" href="/v2/">
+                <img alt="KLSE Screener" class="d-inline-block align-middle" src="/v2/img/icon_navbar.png" style="height:30px;">
+                <span class="d-md-none">KLSE Screener</span>
+            </a>
+
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" style="font-size:0.7em;"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <form class="formSearch form-inline" role="search" action="/v2/search">
+                    <div class="input-group input-group-sm form-inline">
+                        <input type="search" class="form-control form-control-sm ui-autocomplete-input" id="searchquote" name="q" value="" placeholder="Search ticker" style="min-width:100px;" autocomplete="off">
+                        <div class="input-group-append">
+                            <button type="submit" class="btn btn-light">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+
+                    </div>
+                    <span id="quote_loading" style="width:16px;">
+
+                    </span>
+                </form>
+
+                <ul class="nav navbar-nav mr-auto">
+
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-lg fa-filter fa-fw"></i><span>&nbsp;</span><span class="d-md-none d-xl-inline" title="Screener">Screener</span></a>
+                        <div class="dropdown-menu" role="menu">
+                            <a class="dropdown-item" href="/v2/">Stock Screener</a>
+                            <a class="dropdown-item" href="/v2/screener-warrants">Warrant Screener</a>
+                        </div>
+
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="/v2/markets"><i class="fa fa-lg fa-globe fa-fw"></i><span>&nbsp;</span><span class="d-md-none d-lg-inline" title="Market">Market</span></a></li>
+
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i title="Entitlements" class="fa fa-lg fa-euro-sign fa-fw"></i><span>&nbsp;</span><span class="d-md-none d-xl-inline" title="Entitlements">Entitlements</span></a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="/v2/entitlements/dividends">Dividend</a>
+                            <a class="dropdown-item" href="/v2/entitlements/shares-issue">Share issued</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item "><a class="nav-link" href="/v2/financial-reports"><span title="Financial" class="fa fa-fw fa-lg fa-money-bill-alt"></span><span>&nbsp;</span><span class="d-md-none d-lg-inline" title="Financial">Financial</span></a></li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i title="News" class="fa fa-lg fa-newspaper fa-fw"></i><span>&nbsp;</span><span class="d-md-none d-xl-inline" title="News">News</span></a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="/v2/news"><i title="News" class="fa fa-lg fa-newspaper fa-fw"></i> News</a>
+                            <a class="dropdown-item" href="/v2/announcements"><i title="Announcements" class="fa fa-lg fa-bullhorn fa-fw"></i> Announcements</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i title="Discussions" class="fa fa-lg fa-comment-dollar fa-fw"></i><span>&nbsp;</span><span class="d-md-none d-xl-inline" title="Discussions">Discussions</span></a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="/v2/discussion">Comments</a>
+                            <a class="dropdown-item" href="/v2/posts">Ideas</a>
+                        </div>
+                    </li>
+                </ul>
+
+
+
+                <ul class="nav navbar-nav ml-auto">
+                                            <li class="nav-item">
+                            <a class="nav-link" href="/v2/users/login?url="><i class="fa fa-user"></i> Login</a>
+                        </li>
+                    
+                    <li class="nav-item">
+                        <a id="suggestion" class="nav-link" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-lg fa-question"></i><span>&nbsp;</span><span class="d-md-none">Feedback</span></a>
+                        <div class="contact_container dropdown-menu dropdown-menu-right" role="menu" style="min-width:300px;margin-bottom:10px;padding:10px;">
+                            <strong>Help</strong>
+                            <br><br>
+                            <p><a href="https://www.klsescreener.com/v2/contact">Contact us</a></p>
+<!--                            <form method="post" action="contact.php" onclick="">-->
+<!--                                <input type="hidden" name="a" value="suggestion">-->
+<!--                                <input type="hidden" name="url" value="--><!--">-->
+<!--                                Your E-mail:<br/>-->
+<!--                                <input type="text" class="form-control" name="email"><br/>-->
+<!--                                Message:<br/>-->
+<!--                                <textarea name="content"  class="form-control" rows="4" cols="30"></textarea><br/>-->
+<!--                                <input type="submit" class="btn btn-primary" value="Send">-->
+<!--                            </form>-->
+
+                            <p class="suggestion_message"></p>
+                        </div>
+                    </li>
+                </ul>
+
+                
+            </div>
+<!--        </div>-->
+
+    </nav>
+        <div id="content" class="mt-2" style="height: auto !important;">
+
+            <div id="aLegMYzGHfnR" style="margin-top:-20px; display:none;">
+                Our website is made possible by displaying non-intrusive online advertisements to our visitors.<br>
+                Please consider supporting us by disabling or pausing your ad blocker.<br>
+            </div>
+
+            
+            <div class="container-fluid">
+                            </div>
+
+            <div class="wrapper-disabled" style="height: auto !important;">
+                                <link rel="stylesheet" type="text/css" href="//mottie.github.io/tablesorter/css/theme.bootstrap_4.css">
+<link rel="stylesheet" type="text/css" href="//mottie.github.io/tablesorter/css/theme.dropbox.css">
+
+<script type="text/javascript" src="//cdn.klsescreener.com/v2/js/jQuery.unserializeForm.js?15006528000"></script><script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/js/jquery.tablesorter.widgets.min.js"></script>
+
+
+<script>
+$(function() {
+
+        $( "#PE" ).slider({
+        range: true,
+        min: -6400,
+        max: 1569,
+        values: [ -6400, 1569 ],
+        slide: function( event, ui ) {
+            $( "input[name='min_pe']" ).val( $( "#PE" ).slider( "values", 0 ) )
+            $( "input[name='max_pe']" ).val( $( "#PE" ).slider( "values", 1 ) )
+        },
+        stop: function( event, ui ) {
+            $( "input[name='min_pe']" ).val( $( "#PE" ).slider( "values", 0 ) )
+            $( "input[name='max_pe']" ).val( $( "#PE" ).slider( "values", 1 ) )
+            $("#form").change();
+        },
+        });
+        $( "input[name='min_pe']" ).change( function() { $( "#PE" ).slider( "values", 0, $(this).val() ) } );
+        $( "input[name='max_pe']" ).change( function() { $( "#PE" ).slider( "values", 1, $(this).val() ) } );
+        $( "#ROE" ).slider({
+        range: true,
+        min: -4315,
+        max: 20600,
+        values: [ -4315, 20600 ],
+        slide: function( event, ui ) {
+            $( "input[name='min_roe']" ).val( $( "#ROE" ).slider( "values", 0 ) )
+            $( "input[name='max_roe']" ).val( $( "#ROE" ).slider( "values", 1 ) )
+        },
+        stop: function( event, ui ) {
+            $( "input[name='min_roe']" ).val( $( "#ROE" ).slider( "values", 0 ) )
+            $( "input[name='max_roe']" ).val( $( "#ROE" ).slider( "values", 1 ) )
+            $("#form").change();
+        },
+        });
+        $( "input[name='min_roe']" ).change( function() { $( "#ROE" ).slider( "values", 0, $(this).val() ) } );
+        $( "input[name='max_roe']" ).change( function() { $( "#ROE" ).slider( "values", 1, $(this).val() ) } );
+        $( "#EPS" ).slider({
+        range: true,
+        min: -363,
+        max: 312,
+        values: [ -363, 312 ],
+        slide: function( event, ui ) {
+            $( "input[name='min_eps']" ).val( $( "#EPS" ).slider( "values", 0 ) )
+            $( "input[name='max_eps']" ).val( $( "#EPS" ).slider( "values", 1 ) )
+        },
+        stop: function( event, ui ) {
+            $( "input[name='min_eps']" ).val( $( "#EPS" ).slider( "values", 0 ) )
+            $( "input[name='max_eps']" ).val( $( "#EPS" ).slider( "values", 1 ) )
+            $("#form").change();
+        },
+        });
+        $( "input[name='min_eps']" ).change( function() { $( "#EPS" ).slider( "values", 0, $(this).val() ) } );
+        $( "input[name='max_eps']" ).change( function() { $( "#EPS" ).slider( "values", 1, $(this).val() ) } );
+        $( "#NTA" ).slider({
+        range: true,
+        min: -19,
+        max: 29,
+        values: [ -19, 29 ],
+        slide: function( event, ui ) {
+            $( "input[name='min_nta']" ).val( $( "#NTA" ).slider( "values", 0 ) )
+            $( "input[name='max_nta']" ).val( $( "#NTA" ).slider( "values", 1 ) )
+        },
+        stop: function( event, ui ) {
+            $( "input[name='min_nta']" ).val( $( "#NTA" ).slider( "values", 0 ) )
+            $( "input[name='max_nta']" ).val( $( "#NTA" ).slider( "values", 1 ) )
+            $("#form").change();
+        },
+        });
+        $( "input[name='min_nta']" ).change( function() { $( "#NTA" ).slider( "values", 0, $(this).val() ) } );
+        $( "input[name='max_nta']" ).change( function() { $( "#NTA" ).slider( "values", 1, $(this).val() ) } );
+        $( "#DY" ).slider({
+        range: true,
+        min: 0,
+        max: 100,
+        values: [ 0, 100 ],
+        slide: function( event, ui ) {
+            $( "input[name='min_dy']" ).val( $( "#DY" ).slider( "values", 0 ) )
+            $( "input[name='max_dy']" ).val( $( "#DY" ).slider( "values", 1 ) )
+        },
+        stop: function( event, ui ) {
+            $( "input[name='min_dy']" ).val( $( "#DY" ).slider( "values", 0 ) )
+            $( "input[name='max_dy']" ).val( $( "#DY" ).slider( "values", 1 ) )
+            $("#form").change();
+        },
+        });
+        $( "input[name='min_dy']" ).change( function() { $( "#DY" ).slider( "values", 0, $(this).val() ) } );
+        $( "input[name='max_dy']" ).change( function() { $( "#DY" ).slider( "values", 1, $(this).val() ) } );
+
+        $( "#PRICE" ).slider({
+        range: true,
+        min: 0,
+        max: 124,
+        values: [ 0, 124 ],
+        slide: function( event, ui ) {
+            $( "input[name='min_price']" ).val( $( "#PRICE" ).slider( "values", 0 ) )
+            $( "input[name='max_price']" ).val( $( "#PRICE" ).slider( "values", 1 ) )
+        },
+        stop: function( event, ui ) {
+            $( "input[name='min_price']" ).val( $( "#PRICE" ).slider( "values", 0 ) )
+            $( "input[name='max_price']" ).val( $( "#PRICE" ).slider( "values", 1 ) )
+            $("#form").change();
+        },
+        });
+        $( "input[name='min_price']" ).change( function() { $( "#PRICE" ).slider( "values", 0, $(this).val() ) } );
+        $( "input[name='max_price']" ).change( function() { $( "#PRICE" ).slider( "values", 1, $(this).val() ) } );
+
+        $( "#MARKETCAP" ).slider({
+        range: true,
+        min: 0,
+        max: 110231,
+        values: [ 0, 110231 ],
+        slide: function( event, ui ) {
+            $( "input[name='min_marketcap']" ).val( $( "#MARKETCAP" ).slider( "values", 0 ) )
+            $( "input[name='max_marketcap']" ).val( $( "#MARKETCAP" ).slider( "values", 1 ) )
+        },
+        stop: function( event, ui ) {
+            $( "input[name='min_marketcap']" ).val( $( "#MARKETCAP" ).slider( "values", 0 ) )
+            $( "input[name='max_marketcap']" ).val( $( "#MARKETCAP" ).slider( "values", 1 ) )
+            $("#form").change();
+        },
+        });
+        $( "input[name='min_marketcap']" ).change( function() { $( "#MARKETCAP" ).slider( "values", 0, $(this).val() ) } );
+        $( "input[name='max_marketcap']" ).change( function() { $( "#MARKETCAP" ).slider( "values", 1, $(this).val() ) } );
+});
+</script>
+<script>
+    //!window.jQuery && document.write('<script src="http://code.jquery.com/jquery-1.4.2.min.js"><\/script>');
+    $(document).ready(function(event) {
+
+        var val = Cookies.get("screener");
+        // alert(val);
+        try {
+            $("#form").unserializeForm(val);
+
+            $("#form input[type='text']").each(function() {
+                if ( $(this).val() != "" ) {
+                    $(this).change();
+                    console.log( $(this).attr("name") );
+                }
+            });
+        } catch (err) {
+
+        }
+
+
+        $("#form").on('submit change', function(event) {
+            return formAction(event, this);
+        });
+
+        return formAction(event, $("#form"));
+    });
+
+    function formAction(event, form) {
+        console.log(event.type);
+            
+            $("#screener").html("");
+
+            
+            if (event == null || event.type != "submit") return;
+
+            var d = new Date();
+            var startTime = d.getTime();
+            var imgLoading = $("<img>").attr("src", "/v2/img/38-1.gif");
+
+            $("#imgLoading").append(imgLoading);
+            $("#submit").attr("disabled", "disabled");
+            Cookies.set("screener", $(form).serialize());
+
+                        ga('send', 'event', 'Button', 'Click', 'Stock Screening', {
+                hitCallback: function() {
+                    console.log("screening");
+                }
+            });
+
+            // ga('send', {
+            // 'hitType': 'event',         
+            // 'eventCategory': 'button', 
+            // 'eventAction': 'click',     
+            // 'eventLabel': 'stock screening',
+            // 'hitCallback' : function () {
+            //     alert("Event received");
+            // }});
+
+            // ga('send', 'event', 'order online', 'click', {
+            //     hitCallback: function() {
+            //         alert('test');
+            //     }
+            // });
+            
+                        // alert('test');
+
+            $.post("/v2/screener/quote_results", $(form).serialize(), function(data, textstatus, xhr) {
+
+                    $("#result").html(data);
+                    initiate();
+                    showHideColumns();
+                })
+                .done(function() {
+                    //alert( "second success" );
+                })
+                .fail(function(xhr) {
+                    //alert( "error" );
+                    toastr.error('Error screening.');
+                })
+                .always(function() {
+                    var endTime = new Date();
+                    var totalTime = (endTime.getTime() - startTime) / 1000;
+                    $("#submit").removeAttr("disabled");
+                    $("#imgLoading").html(totalTime.toFixed(3) + "s");
+                });
+            return false;
+    }
+
+    $(function() {
+
+        $.get("/v2/boards/out.json", function(data) {
+            //alert(data.board);
+            $.each(data.board, function(i, board) {
+                //alert(board.Board.id);
+                $("<option>").attr("value", board.Board.id).text(board.Board.description).appendTo("select[name='board']");
+            });
+            $("select[name='board']").change(function() {
+                var selectedBoardId = $(this).val();
+                $("select[name='sector']").empty();
+                $("<option>").appendTo("select[name='sector']");
+
+                if (selectedBoardId != "") {
+                    $.each(data.board, function(i, board) {
+                        if (board.Board.id == selectedBoardId) {
+                            $.each(board.Sector, function(i, sector) {
+                                $("<option>").attr("value", sector.id).text(sector.description).appendTo("select[name='sector']");
+                            });
+                            return;
+                        }
+                    });
+                }
+                else {
+                    var addedDescriptions = {};
+                    var uniqueOptions = []; // Array to hold unique options for sorting
+
+                    $.each(data.board, function(i, board) {
+                        $.each(board.Sector, function(i, sector) {
+                            if (!addedDescriptions[sector.description]) {
+                                addedDescriptions[sector.description] = true; // Mark description as added
+                                uniqueOptions.push({ id: sector.id, description: sector.description });
+                                // $("<option>").attr("value", sector.id).text(sector.description).appendTo("select[name='sector']");
+                            }
+                        });
+                    });
+
+
+                    // Sort the unique options by description
+                    uniqueOptions.sort(function(a, b) {
+                        return a.description.localeCompare(b.description);
+                    });
+
+                    // Append the sorted unique options to the select element
+                    $.each(uniqueOptions, function(i, option) {
+                        $("<option>").attr("value", option.id).text(option.description).appendTo("select[name='sector']");
+                    });
+                    console.log(uniqueOptions);
+                }
+            });
+
+            $("select[name='sector']").change(function() {
+                var selectedBoardId = $("select[name='board']").val();
+                var selectedSectorId = $(this).val();
+                // if (selectedSectorId == "") return;  
+                $("select[name='subsector']").empty();
+                $("<option>").appendTo("select[name='subsector']");
+
+                if (selectedBoardId == "" && selectedSectorId == "")
+                {
+                    var addedDescriptions = {};
+                    var uniqueOptions = []; // Array to hold unique options for sorting
+
+                    $.each(data.board, function(i, board) {
+                        $.each(board.Sector, function(i, sector) {
+                            $.each(sector.Subsector, function(j, subsector) {
+                                if (!addedDescriptions[subsector.description]) {
+                                    addedDescriptions[subsector.description] = true; // Mark description as added
+                                    uniqueOptions.push({ id: subsector.id, description: subsector.description });
+                                }
+                            });
+                            
+                        });
+                    });
+
+
+                    // Sort the unique options by description
+                    uniqueOptions.sort(function(a, b) {
+                        return a.description.localeCompare(b.description);
+                    });
+
+                    // Append the sorted unique options to the select element
+                    $.each(uniqueOptions, function(i, option) {
+                        $("<option>").attr("value", option.id).text(option.description).appendTo("select[name='subsector']");
+                    });
+                    console.log(uniqueOptions);
+                    return;
+                }
+
+                else if (selectedBoardId == "" && selectedSectorId != "")
+                {
+                    var addedDescriptions = {};
+                    var uniqueOptions = []; // Array to hold unique options for sorting
+
+                    var selectedSectorText = $("select[name='sector'] option:selected").text();
+
+                    $.each(data.board, function(i, board) {
+                        $.each(board.Sector, function(i, sector) {
+                            if (selectedSectorText == sector.description) {
+                                $.each(sector.Subsector, function(j, subsector) {
+                                    if (!addedDescriptions[subsector.description]) {
+                                        addedDescriptions[subsector.description] = true; // Mark description as added
+                                        uniqueOptions.push({ id: subsector.id, description: subsector.description });
+                                    }
+                                });
+                            }
+                        });
+                    });
+
+
+                    // Sort the unique options by description
+                    uniqueOptions.sort(function(a, b) {
+                        return a.description.localeCompare(b.description);
+                    });
+
+                    // Append the sorted unique options to the select element
+                    $.each(uniqueOptions, function(i, option) {
+                        $("<option>").attr("value", option.id).text(option.description).appendTo("select[name='subsector']");
+                    });
+                    
+                    return;
+                }
+                
+                $.each(data.board, function(i, board) {
+                    if (board.Board.id == selectedBoardId) {
+                        $.each(board.Sector, function(i, sector) {
+                            // console.log(sector.id, selectedSectorId, sector.id == selectedSectorId);
+                            if (sector.id == selectedSectorId) {
+                                $.each(sector.Subsector, function(j, subsector) {
+                                    $("<option>").attr("value", subsector.id).text(subsector.description).appendTo("select[name='subsector']");
+                                });
+                                return;
+                            }
+                            return;
+                        });
+                        return;
+                    }
+                });
+            });
+        });
+    });
+
+    function initiate() {
+        $("table").tablesorter({
+            theme: 'bootstrap',
+            headerTemplate: '{content} {icon}',
+            widgets: ['zebra', 'columns', 'uitheme']
+        });
+
+        var $table = $('table.stocks');
+        $table.floatThead({
+            top: 40,
+            responsiveContainer: function($table) {
+                return $table.closest('.table-responsive');
+            }
+        });
+    }
+
+    $(document).ready(function() {
+        $("select[name='profitable_years_in_years']").on("change", function() {
+            var val = $(this).val();
+            if (val == "") {
+                $("input[name='profitable_strict_years']").attr("disabled", "disabled");
+            } else {
+                $("input[name='profitable_strict_years']").attr("disabled", false);
+            }
+        });
+
+        $("select[name='profitable_quarters_in_years']").on("change", function() {
+            var val = $(this).val();
+            if (val == "") {
+                $("input[name='profitable_strict_quarters']").attr("disabled", "disabled");
+            } else {
+                $("input[name='profitable_strict_quarters']").attr("disabled", false);
+            }
+        });
+
+        $("input[name='profitable_type']").on("change", function() {
+            var val = $(this).val();
+            if (val == "") {
+                $("span[class='profitable_type']").html(val);
+                $("#profitable_container").hide();
+            } else {
+                $("span[class='profitable_type']").html(val);
+                $("#profitable_container").show();
+            }
+        });
+    })
+</script>
+
+
+<div class="container-fluid" style="height: auto !important;">
+    <div class="row" style="height: auto !important;">
+
+        <div class="col-lg-9">
+            <div id="by_conditions">
+                <form method="post" id="form">
+                    <input type="hidden" name="getquote" value="1">
+
+                    <h3>Stocks Screener</h3>
+
+                    <h5><a href="/v2/screener-warrants">Check out Warrant Screener</a></h5>
+                    <br>
+
+                    <div class="row">
+                        <div class="col-sm-1">
+                            <span>Board</span>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <select name="board" class="form-control form-control-sm" data-name="Board" data-value="1">
+                                <option></option>
+                            <option value="1">Main Market</option><option value="2">Ace Market</option><option value="3">Structured Warrants</option><option value="4">ETF</option><option value="5">Bond &amp; Loan</option><option value="6">Leap Market</option></select>
+                        </div>
+
+                        <div class="col-sm-1">
+                            <span>Sector</span>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <select name="sector" class="form-control form-control-sm" data-name="Sector" data-value="1">
+                                <option></option>
+                                                                    <option value="108">Bond Conventional</option>
+                                                                    <option value="110">Bond Islamic</option>
+                                                                    <option value="13">Closed-End Fund</option>
+                                                                    <option value="3">Construction</option>
+                                                                    <option value="1">Consumer Products &amp; Services</option>
+                                                                    <option value="42">Energy</option>
+                                                                    <option value="26">ETF-Bond</option>
+                                                                    <option value="106">ETF-Commodity</option>
+                                                                    <option value="25">ETF-Equity</option>
+                                                                    <option value="7">Financial Services</option>
+                                                                    <option value="44">Health Care</option>
+                                                                    <option value="2">Industrial Products &amp; Services</option>
+                                                                    <option value="10">Plantation</option>
+                                                                    <option value="9">Property</option>
+                                                                    <option value="12">Real Estate Investment Trusts</option>
+                                                                    <option value="35">SPAC</option>
+                                                                    <option value="24">Structured Warrant</option>
+                                                                    <option value="5">Technology</option>
+                                                                    <option value="46">Telecommunications &amp; Media</option>
+                                                                    <option value="48">Transportation &amp; Logistics</option>
+                                                                    <option value="50">Utilities</option>
+                                                            </select>
+                        </div>
+                    </div>
+
+                    <p></p>
+
+                    <div class="row">
+                        <div class="col-sm-1">
+                            <span>Sub sector</span>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <select name="subsector" class="form-control form-control-sm" data-name="Sub-sector" data-value="1">
+                                <option></option>
+                                                                    <option value="5">Agricultural Products</option>
+                                                                    <option value="39">Auto Parts</option>
+                                                                    <option value="7">Automotive</option>
+                                                                    <option value="27">Banking</option>
+                                                                    <option value="91">Bond Fund</option>
+                                                                    <option value="41">Building Materials</option>
+                                                                    <option value="43">Chemicals</option>
+                                                                    <option value="1">Closed End Fund</option>
+                                                                    <option value="93">Commodity Fund</option>
+                                                                    <option value="3">Construction</option>
+                                                                    <option value="9">Consumer Services</option>
+                                                                    <option value="97">Conventional GG</option>
+                                                                    <option value="99">Conventional MGS</option>
+                                                                    <option value="101">Conventional PDS</option>
+                                                                    <option value="67">Digital Services</option>
+                                                                    <option value="45">Diversified Industrials</option>
+                                                                    <option value="85">Electricity</option>
+                                                                    <option value="21">Energy, Infrastructure, Equipment &amp; Services</option>
+                                                                    <option value="95">Equity Fund</option>
+                                                                    <option value="11">Food &amp; Beverages</option>
+                                                                    <option value="87">Gas, Water &amp; Multi-Utilities</option>
+                                                                    <option value="33">Health Care Equipment &amp; Services</option>
+                                                                    <option value="35">Health Care Providers</option>
+                                                                    <option value="13">Houshold Goods</option>
+                                                                    <option value="47">Industrial Engineering</option>
+                                                                    <option value="49">Industrial Materials, Components &amp; Equipment</option>
+                                                                    <option value="51">Industrial Services</option>
+                                                                    <option value="29">Insurance</option>
+                                                                    <option value="103">Islamic GG</option>
+                                                                    <option value="105">Islamic GII</option>
+                                                                    <option value="107">Islamic PDS</option>
+                                                                    <option value="75">Media</option>
+                                                                    <option value="53">Metals</option>
+                                                                    <option value="23">Oil &amp; Gas Producers</option>
+                                                                    <option value="25">Other Energy Resources</option>
+                                                                    <option value="31">Other Financials</option>
+                                                                    <option value="55">Packaging Materials</option>
+                                                                    <option value="15">Personal Goods</option>
+                                                                    <option value="37">Pharmaceuticals</option>
+                                                                    <option value="59">Plantation</option>
+                                                                    <option value="61">Property</option>
+                                                                    <option value="63">Real Estate Investment Trusts</option>
+                                                                    <option value="17">Retailers</option>
+                                                                    <option value="69">Semiconductors</option>
+                                                                    <option value="71">Software</option>
+                                                                    <option value="65">Special Purpose Acquisition Company</option>
+                                                                    <option value="89">Structured Warrants</option>
+                                                                    <option value="73">Technology Equipment</option>
+                                                                    <option value="77">Telecommunications Equipment</option>
+                                                                    <option value="79">Telecommunications Service Providers</option>
+                                                                    <option value="81">Transportation &amp; Logistics Services</option>
+                                                                    <option value="83">Transportation Equipment</option>
+                                                                    <option value="19">Travel, Leisure &amp; Hospitality</option>
+                                                                    <option value="57">Wood &amp; Wood Products</option>
+                                                            </select>
+                        </div>
+
+                    </div>
+
+                    <p></p>
+
+                    <div class="row">
+                        <div class="col-sm-1">
+                            <span title="" data-container="body" data-toggle="popover" data-placement="bottom" data-content="The <b>price-to-earnings ratio</b>, or <strong>P/E ratio</strong>, is an equity valuation multiple. It is defined as market price per share divided by annual earnings per share. <a href='http://en.wikipedia.org/wiki/Price%E2%80%93earnings_ratio' target='_blank' >More</a>" data-original-title="Price to Earning Ratio" style="cursor: pointer;">PE</span>
+                        </div>
+                        <div class="col-sm-3">
+                            <input type="text" name="min_pe" autocomplete="off" placeholder="min" class="text-center form-control form-control-sm" data-name="PE ≥ " data-value="1">
+                        </div>
+                        <div class="col-sm-5 hidden-xs" style="height: 12px;">
+                            <div class="slider ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content" id="PE" style="top:6px;"><div class="ui-slider-range ui-corner-all ui-widget-header" style="left: 0%; width: 100%;"></div><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 0%;"></span><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 100%;"></span></div>
+                        </div>
+                        <div class="col-sm-3">
+                            <input type="text" name="max_pe" placeholder="max" class="text-center form-control form-control-sm" data-name="PE ≤ " data-value="1">
+                        </div>
+                    </div>
+
+                    <p></p>
+
+                    <div class="row">
+
+                        <div class="col-sm-1">
+                            <span title="" data-toggle="popover" data-placement="bottom" data-content="Return on equity (ROE) measures the rate of return on the ownership interest (shareholders' equity) of the common stock owners. <a href='http://en.wikipedia.org/wiki/Return_on_equity' target='_blank'>More</a>" data-original-title="Return on Equity" style="cursor: pointer;">ROE</span>
+                        </div>
+                        <div class="col-sm-3">
+                            <input type="text" name="min_roe" autocomplete="off" placeholder="min" class="text-center form-control form-control-sm" data-name="ROE ≥ " data-value="1">
+                        </div>
+                        <div class="col-sm-5 hidden-xs" style="height: 12px;">
+                            <div class="slider ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content" id="ROE"><div class="ui-slider-range ui-corner-all ui-widget-header" style="left: 0%; width: 100%;"></div><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 0%;"></span><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 100%;"></span></div>
+                        </div>
+                        <div class="col-sm-3">
+                            <input type="text" name="max_roe" autocomplete="off" placeholder="max" class="text-center form-control form-control-sm" data-name="ROE ≤ " data-value="1">
+                        </div>
+                    </div>
+
+                    <p></p>
+
+                    <div class="row">
+
+                        <div class="col-sm-1">
+                            <span title="" data-toggle="popover" data-placement="bottom" data-content="Earnings per share (EPS) is the dollar value of earnings per each outstanding share of a company's common stock. <a href='http://en.wikipedia.org/wiki/Earning_per_share' target='_blank'>More</a>" data-original-title="Earning per Share" style="cursor: pointer;">EPS</span>
+                        </div>
+                        <div class="col-sm-3">
+                            <input type="text" name="min_eps" autocomplete="off" placeholder="min" class="text-center form-control form-control-sm" data-name="EPS ≥ " data-value="1">
+                        </div>
+                        <div class="col-sm-5 hidden-xs" style="height: 12px;">
+                            <div class="slider ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content" id="EPS"><div class="ui-slider-range ui-corner-all ui-widget-header" style="left: 0%; width: 100%;"></div><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 0%;"></span><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 100%;"></span></div>
+                        </div>
+                        <div class="col-sm-3">
+                            <input type="text" name="max_eps" autocomplete="off" placeholder="max" class="text-center form-control form-control-sm" data-name="EPS ≤ " data-value="1">
+                        </div>
+                    </div>
+
+                    <p></p>
+
+                    <div class="row">
+
+                        <div class="col-sm-1">
+                            <span title="" data-toggle="popover" data-placement="bottom" data-content="Calculated as the total assets of a company, minus any intangible assets such as goodwill, patents and trademarks, less all liabilities and the par value of preferred stock. Also known as &quot;net asset value&quot; or &quot;book value&quot;." target="_blank" data-original-title="Net Tangible Asset" style="cursor: pointer;">NTA</span>
+                        </div>
+                        <div class="col-sm-3">
+                            <input type="text" name="min_nta" autocomplete="off" placeholder="min" class="text-center form-control form-control-sm">
+                        </div>
+                        <div class="col-sm-5 hidden-xs" style="height: 12px;">
+                            <div class="slider ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content" id="NTA"><div class="ui-slider-range ui-corner-all ui-widget-header" style="left: 0%; width: 100%;"></div><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 0%;"></span><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 100%;"></span></div>
+                        </div>
+                        <div class="col-sm-3">
+                            <input type="text" name="max_nta" autocomplete="off" placeholder="max" class="text-center form-control form-control-sm">
+                        </div>
+                    </div>
+
+                    <p></p>
+
+                    <div class="row">
+                        <div class="col-sm-1">
+                            <span title="" data-toggle="popover" data-placement="bottom" data-content="The dividend yield or dividend-price ratio of a share is the dividend per share, divided by the price per share. <a href='http://en.wikipedia.org/wiki/Dividend_yield' target='_blank'>More</a>" data-original-title="Dividend Yield" style="cursor: pointer;">DY</span>
+                        </div>
+                        <div class="col-sm-3">
+                            <input type="text" name="min_dy" autocomplete="off" placeholder="min" class="text-center form-control form-control-sm" data-name="Dividend Yield ≥ " data-value="1">
+                        </div>
+                        <div class="col-sm-5 hidden-xs" style="height: 12px;">
+                            <div class="slider ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content" id="DY"><div class="ui-slider-range ui-corner-all ui-widget-header" style="left: 0%; width: 100%;"></div><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 0%;"></span><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 100%;"></span></div>
+                        </div>
+                        <div class="col-sm-3">
+                            <input type="text" name="max_dy" autocomplete="off" placeholder="max" class="text-center form-control form-control-sm" data-name="Dividend Yield ≤ " data-value="1">
+                        </div>
+                    </div>
+
+                    <p></p>
+
+                    <div class="row">
+                        <div class="col-sm-1">
+                            <span title="" data-toggle="popover" data-placement="bottom" data-content="The price-to-book ratio, or P/B ratio, is a financial ratio used to compare a company's current market price to its book value. <a href='http://en.wikipedia.org/wiki/Price_to_book_value' target='_blank'>More</a>" data-original-title="Price to Book Value" style="cursor: pointer;">PTBV</span>
+                        </div>
+                        <div class="col-sm-3">
+                            <input type="text" name="min_ptbv" autocomplete="off" placeholder="min" class="text-center form-control form-control-sm">
+                        </div>
+                        <div class="col-sm-5 hidden-xs" style="height: 12px;">
+                            <div class="slider" id="PTBV"></div>
+                        </div>
+                        <div class="col-sm-3">
+                            <input type="text" name="max_ptbv" autocomplete="off" placeholder="max" class="text-center form-control form-control-sm">
+                        </div>
+                    </div>
+
+                    <p></p>
+
+                    <div class="row">
+                        <div class="col-sm-1">
+                            <span title="" data-toggle="popover" data-placement="bottom" data-content="Price–sales ratio, P/S ratio, or PSR, is a valuation metric for stocks. It is calculated by dividing the company's market cap by the revenue in the most recent year; or, equivalently, divide the per-share stock price by the per-share revenue. <a href='http://en.wikipedia.org/wiki/Price%E2%80%93sales_ratio'  target='_blank'>More</a>" data-original-title="Price to Sales Ratio" style="cursor: pointer;">PSR</span>
+                        </div>
+                        <div class="col-sm-3">
+                            <input type="text" name="min_psr" autocomplete="off" placeholder="min" class="text-center form-control form-control-sm" data-name="PSR ≥ " data-value="1">
+                        </div>
+                        <div class="col-sm-5 hidden-xs" style="height: 12px;">
+                            <div class="slider" id="PSR"></div>
+                        </div>
+                        <div class="col-sm-3">
+                            <input type="text" name="max_psr" autocomplete="off" placeholder="max" class="text-center form-control form-control-sm" data-name="PSR ≤ " data-value="1">
+                        </div>
+                    </div>
+
+                    <p></p>
+
+                    <div class="row">
+                        <div class="col-sm-1">
+                            Price
+                        </div>
+                        <div class="col-sm-3">
+                            <input type="text" name="min_price" autocomplete="off" placeholder="min" class="text-center form-control form-control-sm" data-name="Price ≥ " data-value="1">
+                        </div>
+                        <div class="col-sm-5 hidden-xs" style="height: 12px;">
+                            <div class="slider ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content" id="PRICE"><div class="ui-slider-range ui-corner-all ui-widget-header" style="left: 0%; width: 100%;"></div><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 0%;"></span><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 100%;"></span></div>
+                        </div>
+                        <div class="col-sm-3">
+                            <input type="text" name="max_price" autocomplete="off" placeholder="max" class="text-center form-control form-control-sm" data-name="Price ≤ " data-value="1">
+                        </div>
+                    </div>
+
+                    <p></p>
+
+                    <div class="row">
+                        <div class="col-sm-1">
+                            Vol.<small> '00</small>
+                        </div>
+                        <div class="col-sm-3">
+                            <input type="text" name="min_volume" autocomplete="off" placeholder="min" class="text-center form-control form-control-sm" data-name="Vol '00 ≥ " data-value="1">
+                        </div>
+                        <div class="col-sm-5 hidden-xs" style="height: 12px;">
+                            
+                        </div>
+                        <div class="col-sm-3">
+                            <input type="text" name="max_volume" autocomplete="off" placeholder="max" class="text-center form-control form-control-sm" data-name="Vol '00 ≤ " data-value="1">
+                        </div>
+                    </div>
+
+                    <p></p>
+
+                    <div class="row">
+
+                        <div class="col-sm-1">
+                            <span title="Million">Market Cap (M)</span>
+                        </div>
+                        <div class="col-sm-3">
+                            <input type="text" name="min_marketcap" autocomplete="off" placeholder="min" class="text-center form-control form-control-sm" data-name="Market Cap (M) ≥ " data-value="1">
+                        </div>
+                        <div class="col-sm-5 hidden-xs" style="height: 12px;">
+                            <div class="slider ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content" id="MARKETCAP"><div class="ui-slider-range ui-corner-all ui-widget-header" style="left: 0%; width: 100%;"></div><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 0%;"></span><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 100%;"></span></div>
+                        </div>
+                        <div class="col-sm-3">
+                            <input type="text" name="max_marketcap" autocomplete="off" placeholder="max" class="text-center form-control form-control-sm" data-name="Market Cap (M) ≤ " data-value="1">
+                        </div>
+                    </div>
+
+                    <p></p>
+
+
+                    <div class="row">
+                        <div class="col-md-1">
+                            <label class="">By Stocks</label>
+                        </div>
+                        <div class="col-md-11">
+                            <input type="text" id="stock-tags" name="stock_tags" tabindex="-1" value="" class="selectized" style="display: none;"><div class="selectize-control multi plugin-remove_button"><div class="selectize-input items not-full"><input type="text" autocomplete="new-password" autofill="no" tabindex="" id="stock-tags-selectized" style="width: 4px;"></div><div class="selectize-dropdown multi plugin-remove_button" style="display: none;"><div class="selectize-dropdown-content" tabindex="-1"></div></div></div>
+                        </div>
+                    </div>
+
+                    <p></p>
+
+                    <div class="row" id="profitable_container">
+                        <div class="col-sm-12 d-flex flex-wrap align-items-center">
+                            <span class="mr-3">Continuous Profitable</span>
+                            <select name="profitable_type" class="mr-3" data-width="fit" data-name="Profitable" data-value="1">
+                                <option value="">-</option>
+                                <option value="years">Years</option>
+                                <option value="quarters">Quarters</option>
+                            </select>
+                            <span class="mr-3">for</span>
+                            <div>
+                                <select name="profitable_years" class="mr-3" data-width="fit" data-name="Profitable for (years) " data-value="1">
+                                    <option value="">-</option>
+                                                                            <option value="1">1</option>
+                                                                            <option value="2">2</option>
+                                                                            <option value="3">3</option>
+                                                                            <option value="4">4</option>
+                                                                            <option value="5">5</option>
+                                                                            <option value="6">6</option>
+                                                                            <option value="7">7</option>
+                                                                            <option value="8">8</option>
+                                                                            <option value="9">9</option>
+                                                                            <option value="10">10</option>
+                                                                    </select>
+                                <span class="mr-3">years</span>
+                            </div>
+
+                            &nbsp;&nbsp;<div>
+                                <label for="strict" title="">
+                                    <input type="checkbox" name="profitable_strict" id="strict" style="width:initial;">
+                                    <span>Strict mode</span>
+                                </label>
+                                <span class="fa fa-question-circle" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Shows companies having at least <i>N</i> years financial reports selected." data-original-title="" title="" style="cursor: pointer;"></span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <p></p>
+
+                    <div class="row">
+                        <div class="col-sm-9">
+                            <label for="shariah_mode" class="">
+                                <input id="shariah_mode" type="checkbox" name="shariah_mode" style="width:initial;">
+                                <span>Shariah Compliant</span>
+                            </label>
+                        </div>
+                    </div>
+
+
+                    <!--
+        <div class="row">
+            <div class="col-sm-3">
+                <label for="qoq" class="">
+                    <input id="qoq" type="checkbox" name="qoq" style="width:initial;" />
+                    <span title="Quarter over Quarter" data-toggle="popover" data-placement="bottom" data-content="Latest 2 quarter profit is better than previous financial year quarter's">Quarter over Quarter</span>
+                </label>
+            </div>
+
+            <div class="col-sm-3">
+                <label for="yoy" class="">
+                    <input id="yoy" type="checkbox" name="yoy" style="width:initial;" />
+                    Year over Year
+                </label>
+            </div>
+
+            <div class="col-sm-3">
+                <label for="conq" class="">
+                    <input id="conq" type="checkbox" name="conq" style="width:initial;" />
+                    Continuous Quarter
+                </label>
+            </div>
+
+            <div class="col-sm-3">
+                <label for="topq" class="">
+                    <input id="topq" type="checkbox" name="topq" style="width:initial;" />
+                    Top Quarter
+                </label>
+            </div>
+        </div>
+        -->
+
+                    <div class="row mt-2">
+                        <div class="col-sm-2">
+                            <span>Net Profit</span>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <label class="text-muted" data-toggle="tooltip" data-placement="top" title="" data-original-title="Quarter over Quarter profit growth for last 2 financial quarters vs previous 2 financial quarters.">
+                                <span class="btn btn-sm btn-outline-success">QoQ</span>
+                                <select name="qoq" id="qoq" class="" data-width="fit" data-name="QoQ" data-value="1">
+                                    <option value="">Any</option>
+                                    <option value="1">On</option>
+                                    <option value="0">Off</option>
+                                </select>
+                            </label>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <label class="text-muted" data-toggle="tooltip" data-placement="top" title="" data-original-title="Year over Year profit growth.">
+                                <span class="btn btn-sm btn-outline-success">YoY</span>
+                                <select name="yoy" id="yoy" class="" data-width="fit" data-name="YoY" data-value="1">
+                                    <option value="">Any</option>
+                                    <option value="1">On</option>
+                                    <option value="0">Off</option>
+                                </select>
+                            </label>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <label class="text-muted" data-toggle="tooltip" data-placement="top" title="" data-original-title="Continuous Quarter profit growth for last 3 quarters.">
+                                <span class="btn btn-sm btn-outline-success">ConQ</span>
+                                <select name="conq" id="conq" class="" data-width="fit" data-name="ConQ" data-value="1">
+                                    <option value="">Any</option>
+                                    <option value="1">On</option>
+                                    <option value="0">Off</option>
+                                </select>
+                            </label>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <label class="text-muted" data-toggle="tooltip" data-placement="top" title="" data-original-title="Top Quarter in which latest Quarter profit is 2 years high.">
+                                <span class="btn btn-sm btn-outline-success">TopQ</span>
+                                <select name="topq" id="topq" class="" data-width="fit" data-name="TopQ" data-value="1">
+                                    <option value="">Any</option>
+                                    <option value="1">On</option>
+                                    <option value="0">Off</option>
+                                </select>
+                            </label>
+                        </div>
+                    </div>
+
+
+                    <div class="row mt-2">
+                        <div class="col-sm-2">
+                            Revenue
+                        </div>
+
+                        <div class="col-sm-2">
+                            <label class="text-muted" data-toggle="tooltip" data-placement="top" title="" data-original-title="Quarter over Quarter revenue growth for last 2 financial quarters vs previous 2 financial quarters.">
+                                <span class="btn btn-sm btn-outline-info">QoQ</span>
+                                <select name="rqoq" id="rqoq" class="" data-width="fit" data-name="Revenue QoQ" data-value="1">
+                                    <option value="">Any</option>
+                                    <option value="1">On</option>
+                                    <option value="0">Off</option>
+                                </select>
+                            </label>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <label class="text-muted" data-toggle="tooltip" data-placement="top" title="" data-original-title="Year over Year revenue growth.">
+                                <span class="btn btn-sm btn-outline-info">YoY</span>
+                                <select name="ryoy" id="ryoy" class="" data-width="fit" data-name="Revenue YoY" data-value="1">
+                                    <option value="">Any</option>
+                                    <option value="1">On</option>
+                                    <option value="0">Off</option>
+                                </select>
+                            </label>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <label class="text-muted" data-toggle="tooltip" data-placement="top" title="" data-original-title="Continuous Quarter revenue growth for last 3 quarters.">
+                                <span class="btn btn-sm btn-outline-info">ConQ</span>
+                                <select name="rconq" id="rconq" class="" data-width="fit" data-name="Revenue ConQ" data-value="1">
+                                    <option value="">Any</option>
+                                    <option value="1">On</option>
+                                    <option value="0">Off</option>
+                                </select>
+                            </label>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <label class="text-muted" data-toggle="tooltip" data-placement="top" title="" data-original-title="Top Quarter where latest Quarter revenue is 2 year high.">
+                                <span class="btn btn-sm btn-outline-info">TopQ</span>
+                                <select name="rtopq" id="rtopq" class="" data-width="fit" data-name="Revenue TopQ" data-value="1">
+                                    <option value="">Any</option>
+                                    <option value="1">On</option>
+                                    <option value="0">Off</option>
+                                </select>
+                            </label>
+                        </div>
+                    </div>
+
+                    
+                        <div class="row mt-2">
+                            <div class="col-sm-2">
+                                Price Change
+                            </div>
+                            <div class="col-sm-2">
+                                <label>
+                                    <input class="check-radio" type="checkbox" name="price_gainer" value="1" data-name="Gainers"> <span title="">Gainers</span>
+                                </label>
+                            </div>
+                            <div class="col-sm-2">
+                                <label>
+                                    <input class="check-radio" type="checkbox" name="price_loser" value="1" data-name="Losers"> <span title="">Losers</span>
+                                </label>
+                            </div>
+
+                            <div class="col-sm-2">
+                                <label>
+                                    <input class="check-radio" type="checkbox" name="price_unchange" value="1" data-name="Price unchange"> <span title="">Unchange</span>
+                                </label>
+                            </div>
+
+                        </div>
+
+                        <div class="row mt-2">
+                            <div class="col-sm-2">
+                                52-week Price
+                            </div>
+                            <div class="col-sm-2">
+                                <label>
+                                    <input class="check-radio" type="checkbox" name="year_price" value="high" data-name="1 Year High"> <span title="">Year High</span>
+                                </label>
+                            </div>
+                            <div class="col-sm-2">
+                                <label>
+                                    <input class="check-radio" type="checkbox" name="year_price" value="low" data-name="1 Year Low"> <span title="">Year Low</span>
+                                </label>
+                            </div>
+
+                        </div>
+
+
+                        <div class="row mt-2">
+                            <div class="col-sm-2">
+                                RSI(14)
+                            </div>
+
+                            <div class="col-sm-2">
+                                <label>
+                                    <input class="check-radio" type="checkbox" name="rsi" value="overbought" data-name="RSI 14 oversold"> <span title="" data-toggle="tooltip" data-original-title="> 79">Overbought</span>
+                                </label>
+                            </div>
+
+                            <div class="col-sm-2">
+                                <label>
+                                    <input class="check-radio" type="checkbox" name="rsi" value="oversold" data-name="RSI 14 oversold"> <span title="" data-toggle="tooltip" data-original-title="< 30">Oversold</span>
+                                </label>
+                            </div>
+
+                            <div class="col-sm-2">
+                                <label>
+                                    <input class="check-radio" type="checkbox" name="rsi" value="neutral" data-name="RSI 14 Neutral"> <span title="">Neutral</span>
+                                </label>
+                            </div>
+
+                            
+                        </div>
+
+
+                        <div class="row mt-2">
+                            <div class="col-sm-2">
+                                Stochastic(14)
+                            </div>
+
+                            <div class="col-sm-2">
+                                <label>
+                                    <input class="check-radio" type="checkbox" name="stochastic" value="overbought" data-name="Stochastic 14 overbought"> <span title="> 80">Overbought</span>
+                                </label>
+                            </div>
+
+                            <div class="col-sm-2">
+                                <label>
+                                    <input class="check-radio" type="checkbox" name="stochastic" value="oversold" data-name="Stochastic 14 oversold"> <span title="< 80">Oversold</span>
+                                </label>
+                            </div>
+
+                            <div class="col-sm-2">
+                                <label>
+                                    <input class="check-radio" type="checkbox" name="stochastic" value="neutral" data-name="Stochastic 14 neutral"> <span title="">Neutral</span>
+                                </label>
+                            </div>
+
+                                                    </div>
+
+                        <div class="row mt-2">
+                            <div class="col-sm-2">
+                                SMA
+                            </div>
+
+                            <div class="col-sm-2">
+                                <label>
+                                    <input class="check" type="checkbox" name="price_gt_sma_5" value="5" data-name="Price ≥ SMA5"> <span data-toggle="tooltip" title="" data-original-title="Price ≥ SMA5">SMA5</span>
+                                </label>
+                            </div>
+
+                            <div class="col-sm-2">
+                                <label>
+                                    <input class="check" type="checkbox" name="price_gt_sma_10" value="10" data-name="Price ≥ SMA10"> <span data-toggle="tooltip" title="" data-original-title="Price ≥ SMA10">SMA10</span>
+                                </label>
+                            </div>
+
+                            <div class="col-sm-2">
+                                <label>
+                                    <input class="check" type="checkbox" name="price_gt_sma_20" value="20" data-name="Price ≥ SMA20"> <span data-toggle="tooltip" title="" data-original-title="Price ≥ SMA20">SMA20</span>
+                                </label>
+                            </div>
+
+                            <div class="col-sm-2">
+                                <label>
+                                    <input class="check" type="checkbox" name="price_gt_sma_50" value="50" data-name="Price ≥ SMA50"> <span data-toggle="tooltip" title="" data-original-title="Price ≥ SMA50">SMA50</span>
+                                </label>
+                            </div>
+
+                            <div class="col-sm-2">
+                                <label>
+                                    <input class="check" type="checkbox" name="price_gt_sma_200" value="200" data-name="Price ≥ SMA200"> <span data-toggle="tooltip" title="" data-original-title="Price ≥ SMA200">SMA200</span>
+                                </label>
+                            </div>
+                        </div>
+
+
+                    
+                                            <div class="text-muted">Login for more.</div>
+                    
+                    
+                        <div class="row mt-2">
+                            <div class="col-sm-2">
+                                Price Breakout
+                            </div>
+
+                            <div class="col-sm-2">
+                                <label>
+                                    <input class="check-radio" type="checkbox" name="breakout" value="30d" data-name="Price breakout 30 days"> <span title="">30 days</span>
+                                </label>
+                            </div>
+
+                            <div class="col-sm-2">
+                                <label>
+                                    <input class="check-radio" type="checkbox" name="breakout" value="1y" data-name="Price breakout 1 year"> <span title="">1 year</span>
+                                </label>
+                            </div>
+
+                            <div class="col-sm-2">
+                                <label>
+                                    <input class="check-radio" type="checkbox" name="breakout" value="30d_near" data-name="Price near 30 days high"> <span title="">near 30d high</span>
+                                </label>
+                            </div>
+
+                            <div class="col-sm-2">
+                                <label>
+                                    <input class="check-radio" type="checkbox" name="breakout" value="1y_near" data-name="Price near 1 year high"> <span title="">near 1y high</span>
+                                </label>
+                            </div>
+                        </div>
+
+                    
+
+
+                    <div class="row mt-2">
+
+                        <div class="col-sm-2">
+                            Cash and Debt
+                        </div>
+
+                        <div class="col-sm-2" data-toggle="tooltip" title="" data-original-title="Cash is more than Debt">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text text-warning">Net Cash</span>
+                                </div>
+                                <input type="checkbox" class="form-control" name="netcash" data-name="Net Cash">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row mt-2">
+
+
+                        <div class="col-sm-2">
+                            Debt to Cash
+                        </div>
+
+                        <div class="col-sm-4 ">
+                            <div class="input-group">
+
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Min</span>
+                                </div>
+                                <input type="number" step="0.1" min="0" class="form-control" name="debt_to_cash_min" data-name="Debt to Cash ≥ " data-value="1">
+
+
+                                <input type="number" step="0.1" min="0" class="form-control" name="debt_to_cash_max" data-name="Debt to Cash ≤ " data-value="1">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Max</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-2">
+
+                        <div class="col-sm-2">
+                            Debt to Equity
+                        </div>
+
+                        <div class="col-sm-4 ">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Min</span>
+                                </div>
+                                <input type="number" step="0.1" min="0" class="form-control" name="debt_to_equity_min" data-name="Debt to Equity ≥ " data-value="1">
+
+                                <input type="number" step="0.1" min="0" class="form-control" name="debt_to_equity_max" data-name="Debt to Equity ≤ " data-value="1">
+                                <div class="input-group-append">
+                                    <span class="input-group-text">Max</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="row mt-2">
+                        <div class="col-sm-2">
+                            Columns
+                        </div>
+                        <div class="col-sm-10 header-toggle">
+                            <a data-col="2">Code</a> -
+                            <a data-col="3">Category</a> -
+                            <a data-col="4">Price</a> -
+                            <a data-col="5">Change %</a> -
+                            <a data-col="6">52w Price</a> -
+                            <a data-col="7">Volume</a> -
+                            <a data-col="8">EPS</a> -
+                            <a data-col="9">DPS</a> -
+                            <a data-col="10">NTA</a> -
+                            <a data-col="11">PE</a> -
+                            <a data-col="12">DY</a> -
+                            <a data-col="13">ROE</a> -
+                            <a data-col="14">PTBV</a> -
+                            <a data-col="15">Cap</a> -
+                            <a data-col="16">Indicators</a>
+                        </div>
+                    </div>
+
+
+                    <div class="mt-4 mb-2 d-flex justify-content-between">
+                        <div class="">
+                            <input type="reset" class="btn btn-warning" value="Clear">
+                        </div>
+                        <div class="">
+                            <input type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent btn btn-primary" id="submit" value="Screen" style="font-size:1.5em"> <span id="imgLoading"></span>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+
+        <div class="col-lg-3 mt-4 mt-lg-0 " style="height: auto !important;">
+            <div class="ad_responsive mt-0">
+                                <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3964569253220025" crossorigin="anonymous" data-checked-head="true"></script>
+                <!-- Responsive Skyscraper -->
+                <ins class="adsbygoogle" style="display: block; height: 0px;" data-ad-client="ca-pub-3964569253220025" data-ad-slot="7736195610" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done" data-ad-status="unfilled"><div id="aswift_1_host" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 0px; width: 770px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: hidden; opacity: 0;"><iframe id="aswift_1" name="aswift_1" style="left: 0px; position: absolute; top: 0px; border: 0px; width: 770px; height: 0px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="770" height="0" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-3964569253220025&amp;output=html&amp;h=280&amp;slotname=7736195610&amp;adk=2693874022&amp;adf=929796990&amp;pi=t.ma~as.7736195610&amp;w=770&amp;fwrn=4&amp;fwrnh=100&amp;lmt=1700057676&amp;rafmt=1&amp;format=770x280&amp;url=https%3A%2F%2Fwww.klsescreener.com%2Fv2%2F&amp;ea=0&amp;fwr=0&amp;fwrattr=true&amp;rpe=1&amp;resp_fmts=3&amp;wgl=1&amp;uach=WyJtYWNPUyIsIjEzLjUuMCIsImFybSIsIiIsIjExOS4wLjYwNDUuMTIzIixudWxsLDAsbnVsbCwiNjQiLFtbIkhlYWRsZXNzQ2hyb21lIiwiMTE5LjAuNjA0NS4xMjMiXSxbIkNocm9taXVtIiwiMTE5LjAuNjA0NS4xMjMiXSxbIk5vdD9BX0JyYW5kIiwiMjQuMC4wLjAiXV0sMF0.&amp;dt=1700057674741&amp;bpp=48&amp;bdt=3499&amp;idt=2042&amp;shv=r20231109&amp;mjsv=m202311090101&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;prev_fmts=0x0&amp;nras=1&amp;correlator=7709914148063&amp;frm=20&amp;pv=1&amp;ga_vid=1629539496.1700057673&amp;ga_sid=1700057677&amp;ga_hid=1342204923&amp;ga_fc=1&amp;u_tz=480&amp;u_his=2&amp;u_h=982&amp;u_w=1512&amp;u_ah=869&amp;u_aw=1512&amp;u_cd=30&amp;u_sd=2&amp;dmc=8&amp;adx=15&amp;ady=1687&amp;biw=800&amp;bih=600&amp;scr_x=0&amp;scr_y=0&amp;eid=44759876%2C44759927%2C44759837%2C44798934%2C44801485%2C44806500%2C31078301%2C44806139%2C44807763%2C44808148%2C44808284%2C44809054&amp;oid=2&amp;pvsid=3266550107824157&amp;tmod=1551451484&amp;uas=0&amp;nvt=1&amp;fc=1920&amp;brdim=0%2C0%2C0%2C0%2C1512%2C38%2C0%2C0%2C800%2C600&amp;vis=1&amp;rsz=o%7Co%7CeEbr%7C&amp;abl=NS&amp;pfx=0&amp;fu=128&amp;bc=31&amp;psd=W251bGwsbnVsbCxudWxsLDNd&amp;ifi=2&amp;uci=a!2&amp;btvi=1&amp;fsb=1&amp;dtd=2280" data-google-container-id="a!2" data-google-query-id="CJ6ayK-YxoIDFaKsZAodVE0GhQ" data-load-complete="true"></iframe></div></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+                            </div>
+
+            <div id="anymind_right"></div>
+
+            <div id="screener" class="mt-5"></div>
+        </div>
+
+    </div>
+
+    <div id="result">
+
+    </div>
+
+    <hr>
+    <div class="row">
+        <div class="col-12" style="height: auto !important;">
+            <div class="ad_responsive">
+            <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3964569253220025" crossorigin="anonymous" data-checked-head="true"></script>
+                <!-- KLSE Bottom -->
+                <ins class="adsbygoogle" style="display: block; height: 0px;" data-ad-client="ca-pub-3964569253220025" data-ad-slot="7559337306" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done" data-ad-status="unfilled"><div id="aswift_2_host" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 0px; width: 770px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: hidden; opacity: 0;"><iframe id="aswift_2" name="aswift_2" style="left: 0px; position: absolute; top: 0px; border: 0px; width: 770px; height: 0px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="770" height="0" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-3964569253220025&amp;output=html&amp;h=280&amp;slotname=7559337306&amp;adk=3971490208&amp;adf=3047402979&amp;pi=t.ma~as.7559337306&amp;w=770&amp;fwrn=4&amp;fwrnh=100&amp;lmt=1700057678&amp;rafmt=1&amp;format=770x280&amp;url=https%3A%2F%2Fwww.klsescreener.com%2Fv2%2F&amp;ea=0&amp;fwr=0&amp;fwrattr=true&amp;rpe=1&amp;resp_fmts=3&amp;wgl=1&amp;uach=WyJtYWNPUyIsIjEzLjUuMCIsImFybSIsIiIsIjExOS4wLjYwNDUuMTIzIixudWxsLDAsbnVsbCwiNjQiLFtbIkhlYWRsZXNzQ2hyb21lIiwiMTE5LjAuNjA0NS4xMjMiXSxbIkNocm9taXVtIiwiMTE5LjAuNjA0NS4xMjMiXSxbIk5vdD9BX0JyYW5kIiwiMjQuMC4wLjAiXV0sMF0.&amp;dt=1700057674911&amp;bpp=94&amp;bdt=3668&amp;idt=3519&amp;shv=r20231109&amp;mjsv=m202311090101&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;prev_fmts=0x0%2C770x280&amp;nras=1&amp;correlator=7709914148063&amp;frm=20&amp;pv=1&amp;ga_vid=1629539496.1700057673&amp;ga_sid=1700057677&amp;ga_hid=1342204923&amp;ga_fc=1&amp;u_tz=480&amp;u_his=2&amp;u_h=982&amp;u_w=1512&amp;u_ah=869&amp;u_aw=1512&amp;u_cd=30&amp;u_sd=2&amp;dmc=8&amp;adx=15&amp;ady=2048&amp;biw=800&amp;bih=600&amp;scr_x=0&amp;scr_y=0&amp;eid=44759876%2C44759927%2C44759837%2C44798934%2C44801485%2C44806500%2C31078301%2C44806139%2C44807763%2C44808148%2C44808284%2C44809054&amp;oid=2&amp;pvsid=3266550107824157&amp;tmod=1551451484&amp;uas=0&amp;nvt=1&amp;fc=1920&amp;brdim=0%2C0%2C0%2C0%2C1512%2C38%2C0%2C0%2C800%2C600&amp;vis=1&amp;rsz=o%7Co%7CeEbr%7C&amp;abl=NS&amp;pfx=0&amp;fu=128&amp;bc=31&amp;psd=W251bGwsbnVsbCxudWxsLDNd&amp;ifi=3&amp;uci=a!3&amp;btvi=2&amp;fsb=1&amp;dtd=3700" data-google-container-id="a!3" data-google-query-id="CPuqqLCYxoIDFaoQ-QAdfxw0ZQ" data-load-complete="true"></iframe></div></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    $(function() {
+        $("[data-toggle='popover']")
+            .popover({
+                trigger: 'manual',
+                html: true
+            })
+            .click(function(e) {
+                $("[data-toggle='popover']").not(this).popover('hide');
+                $(this).popover('show');
+                e.stopPropagation();
+            })
+            .css("cursor", "pointer");
+
+        /*
+         $("button[data-toggle='popover']").popover(
+         {
+         trigger: 'hover',
+         html: true,
+         placement: 'right',
+         content: 'hello world'
+         });
+         */
+        $('html').click(function(e) {
+            $("[data-toggle='popover']").popover('hide');
+        });
+    });
+</script>
+
+<script>
+    $(function() {
+        $("input[type='reset']").click(function() {
+            $("#stock-tags")[0].selectize.clear();
+            $("select").val('');
+            $("#screener").html("");
+            //$("select").selectpicker("refresh");
+        });
+    });
+</script>
+
+<style>
+    .popover {
+        min-width: 260px;
+    }
+</style>
+
+<script>
+    $('#stock-tags').selectize({
+        delimiter: ',',
+        plugins: ['remove_button'],
+
+        valueField: 'code',
+        labelField: 'name',
+        searchField: ['name', 'code'],
+        /*
+        options: [
+            {code: '6947', name: 'DIGI'},
+            {code: '5983', name: 'MBMR'}
+        ],
+        */
+        render: {
+            item: function(item, escape) {
+                return '<div>' +
+                    (item.name ? '<span class="name">' + escape(item.name) + '</span>' : '') +
+                    (item.code ? ' <span class="code">' + escape(item.code) + '</span>' : '') +
+                    '</div>';
+            },
+            option: function(item, escape) {
+                var label = item.name || item.code;
+                var caption = item.name ? item.code : null;
+                return '<div class="p-2">' +
+                    '<span class="">' + escape(label) + '</span> ' +
+                    (caption ? '<span class="caption">' + escape(caption) + '</span>' : '') +
+                    '</div>';
+            }
+        },
+        load: function(query, callback) {
+            if (!query.length) return callback();
+            $.ajax({
+                url: '/v2/screener/search/' + encodeURIComponent(query),
+                type: 'GET',
+                dataType: 'json',
+                error: function() {
+                    callback();
+                },
+                success: function(res) {
+                    console.log(res.code);
+                    callback(res);
+                }
+            });
+        }
+    });
+
+    var $params_string = getCookie("screener");
+    if ($params_string != null && $params_string !== "") {
+        var $param = getParameterByName('stock_tags', $params_string);
+        $param = decodeURIComponent(decodeURIComponent($param));
+        var $stock_codes = $param.split(",");
+        for (i in $stock_codes) {
+            if ($stock_codes[i] == null) continue;
+            $("#stock-tags")[0].selectize.addOption({
+                code: $stock_codes[i]
+            });
+        }
+        if ($param != "") {
+            $("#stock-tags")[0].selectize.setValue($stock_codes);
+        }
+    }
+</script>
+
+<script>
+
+</script>
+
+<script>
+    // set default cookie
+    $(".header-toggle a").click(function() {
+        var num = $(this).data('col');
+
+        if ($('#result table th:nth-child(' + num + ')').is(':visible')) {
+            $('#result table th:nth-child(' + num + ')').hide();
+            $('#result table td:nth-child(' + num + ')').hide();
+            $('#result table col:nth-child(' + num + ')').hide();
+            $('#result table fthtd:nth-child(' + num + ')').hide();
+            var headers = new Array();
+            headers[num] = 0;
+            Cookies.set('headers', JSON.stringify(headers));
+
+        } else {
+            $('#result table th:nth-child(' + num + ')').show();
+            $('#result table td:nth-child(' + num + ')').show();
+            $('#result table col:nth-child(' + num + ')').show();
+            $('#result table fthtd:nth-child(' + num + ')').show();
+            var headers = new Array();
+            headers[num] = 1;
+            Cookies.set('headers', JSON.stringify(headers));
+        }
+    });
+
+    //default columns;
+    if (Cookies.get('headers') == null) {
+        var headers = new Array();
+        headers[16] = 0;
+        Cookies.set('headers', JSON.stringify(headers));
+    }
+
+    function showHideColumns() {
+        var headers = JSON.parse(Cookies.get('headers'));
+        for (var num in headers) {
+            if (headers[num] == 0) {
+                $('#result table th:nth-child(' + num + ')').hide();
+                $('#result table td:nth-child(' + num + ')').hide();
+                $('#result table col:nth-child(' + num + ')').hide();
+                $('#result table fthtd:nth-child(' + num + ')').hide();
+            }
+        }
+    }
+</script>
+
+<style>
+    #by_conditions>form>div {
+        align-items: center;
+    }
+</style>
+
+<style>
+    label {
+        /*display: flex;*/
+        cursor: pointer;
+        font-weight: 500;
+        position: relative;
+        margin-bottom: 0em;
+        /* Accessible outline */
+        /* Remove comment to use */
+        /*
+            &:focus-within {
+                    outline: .125em solid $primary-color;
+            }
+        */
+    }
+
+    label input {
+        position: absolute;
+        left: -9999px;
+    }
+
+    label input:checked+span {
+        background-color: #d6d6e5;
+    }
+
+    label input:checked+span:before {
+        box-shadow: inset 0 0 0 0.4375em #00005c;
+    }
+
+    label input+span {
+        display: flex;
+        align-items: center;
+        padding: 0.3em 0.5em;
+        border-radius: 0.5em;
+        transition: 0.25s ease;
+    }
+
+    label span:hover {
+        background-color: #d6d6e5;
+    }
+
+    input[type=radio]+span:before {
+        display: flex;
+        flex-shrink: 0;
+        content: "";
+        background-color: #fff;
+        width: 1.2em;
+        height: 1.2em;
+        border-radius: 50%;
+        margin-right: 0.375em;
+        transition: 0.25s ease;
+        box-shadow: inset 0 0 0 0.101em #00005c;
+    }
+
+    input[type=checkbox]+span:before {
+        display: flex;
+        flex-shrink: 0;
+        content: "";
+        background-color: #fff;
+        width: 1.2em;
+        height: 1.2em;
+        border-radius: 25%;
+        margin-right: 0.2em;
+        transition: 0.25s ease;
+        box-shadow: inset 0 0 0 0.101em #00005c;
+        /*1.0em display problem in firefox*/
+    }
+</style>
+
+<style>
+    .box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    select {
+        /*background-color: #0563af;*/
+        /*color: white;*/
+        border: none;
+        padding: 4px 8px;
+        height: 100%;
+        /*box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);*/
+        /*-webkit-appearance: button;*/
+        /*appearance: button;*/
+        /*outline: none;*/
+    }
+
+    .box select option {
+        padding: 30px;
+    }
+</style>
+
+<script>
+    $.fn.checkradio = function() {
+
+        $(this).click(function() {
+            $name = $(this).attr("name");
+            var checked = this.checked;
+            $('input[name=' + $name + ']').prop('checked', false);
+            this.checked = checked;
+        });
+
+    };
+    $("input.check-radio").checkradio();
+</script>            </div>
+        </div>
+
+                        <footer class="footer" id="footer">
+    <div class="footer_container">
+        <div class="wrapper-disabled container">
+
+            <div class="row">
+
+                <div class="col-6 col-md">
+                    <h4>Announcements</h4>
+                    <p><a href="/v2/ipos" target="_blank">IPO</a></p>
+                    <p><a href="/v2/shareholdings" target="_blank">Shareholdings</a></p>
+                </div>
+
+                <div class="col-6 col-md">
+                    <h4>Discussion</h4>
+                    <p><a href="/v2/discussion"><span class="fa fa-comment"></span> Comments</a></p>
+                    <p><a href="/v2/pages/posting_guidelines"><span class="fa fa-info-circle"></span> Guidelines</a></p>
+                </div>
+
+                <div class="col-6 col-md">
+                    <h4>About</h4>
+                    <p><a href="/v2/.."><i class="fa fa-home"></i> Home</a></p>
+                    <p><a href="/v2/contact"><i class="fa fa-envelope"></i> Contact Us</a></p>
+                    <h4>Follow us</h4>
+                    <p><a href="https://fb.com/klsescreener" target="_blank"><span class="fab fa-facebook-square"></span> Facebook</a></p>
+                </div>
+
+                <div class="col-6 col-md">
+                    <p>Also available on</p>
+
+                    <p><a href="https://play.google.com/store/apps/details?id=net.neobie.klse" target="_blank">
+                            <img alt="Android app on Google Play" src="https://play.google.com/intl/en_gb/badges/images/badge_new.png" title="Android app on Google Play" width="129">
+                        </a>
+
+                    </p><p><a href="https://itunes.apple.com/my/app/klse-screener/id593048150" target="_blank"><img src="//cdn.klsescreener.com/v2/../themes/images/app_store.png" alt="iOS App on AppStore" width="129"></a></p>
+
+                    <p><a href="https://appgallery.cloud.huawei.com/marketshare/app/C101209183" target="_blank"><img src="//cdn.klsescreener.com/v2/../themes/images/20200220_AppGallery_Badge_Black.png" alt="Huawei AppGallery" width="129"></a></p>
+
+                    <p><a href="http://www.windowsphone.com/ms-my/store/app/klse-screener/d92bdf04-adf1-46f8-ada3-f2e62cb974dc" target="_blank"><img src="/v2/../themes/images/154x40_WPS_Download_cyan.png" alt="WP8 App on Windows Phone Store" width="129"></a></p>
+
+                    <p></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    
+    <div id="modal-container">
+
+
+
+    </div>
+
+    <div class="footer_bottom">
+        <div class="wrapper-disabled">
+            <small>
+            © KLSE Screener 2023 | Neobie Enterprise Sdn Bhd
+            |
+            <span><a href="/v2/pages/terms">Terms of Use</a></span>
+            </small>
+        </div>
+
+    </div>
+</footer>
+        <div id="notify">
+            <div class="ads" style="width:1px;">
+            </div>
+        </div>
+
+
+        <script>
+            $(function() {
+                if (localStorage.getItem("darkSwitch") !== null && localStorage.getItem("darkSwitch") === "dark") {
+                    setCookie("darkSwitch", "dark", 30);
+                    $(".table-theme").addClass('table-dark');
+                } else {
+                    setCookie("darkSwitch", "", 0);
+                    $(".table-theme").removeClass('table-dark');
+                }
+            });
+        </script>
+
+        <script>
+            $(function() {
+                var $notifications_loaded = false;
+                $("#icon_notification").click(function() {
+                    if ($notifications_loaded) {
+                        console.log('loaded');
+                        return;
+                    }
+
+                    $.get('/v2/notifications', function(data) {
+                        $("#icon_notification span.num").remove();
+                        $("#notification-scroll").html(data.html);
+                        $notifications_loaded = true;
+
+                        $.ajax({
+                            url: "/v2/notifications/update_notif_last_check",
+                            method: "PUT"
+                        });
+                    }, 'json');
+                });
+            });
+        </script>
+
+                <script>
+            $(function() {
+                $.post('/v2/users/device', function(data) {
+                }, 'json');
+            });
+        </script>
+        
+                <script type="text/javascript" src="//cdn.klsescreener.com/v2/js/dark-mode-switch.js?5"></script>        <script>
+
+        </script>
+
+
+        <div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div>
+        <script>
+            (function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=690278390997228";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
+
+                <script>
+            lazyLoadInstance.update();
+            $(document).ajaxSuccess(function(event, xhr, settings) {
+                lazyLoadInstance.update();
+            });
+        </script>
+
+        <script type="text/javascript" src="//cdn.klsescreener.com/v2/js/prebid-ads.js"></script>
+
+        <script>
+            function isBrave() {
+                if (window.navigator.brave != undefined) {
+                    if (window.navigator.brave.isBrave.name == "isBrave") {
+                    return true;
+                    } else {
+                    return false;
+                    }
+                } else {
+                    return false;
+                }
+            }
+            
+                        if (isBrave()) {
+                gtag('set', 'user_properties', {
+                    isBrave: '1',
+                });
+            } else {
+                gtag('set', 'user_properties', {
+                    isBrave: '0',
+                });
+            }
+                        
+        </script>
+
+        <script>
+            var checkAdBlock = function(adblock) {
+                if (adblock) {
+                    // adblocker detected, show fallback
+                    document.getElementById('aLegMYzGHfnR').style.display = 'block';
+                    adblock = 1;
+                                            // ga('send', 'event', 'adblock', 'enable', 1);
+                        gtag('set', 'user_properties', {
+                            adblock: '1',
+                        });
+                        
+
+                                                // _gaq.push(['_setCustomVar',
+                        //     1,
+                        //     'Adblock',
+                        //     '1',
+                        // ]);
+                                    } else {
+                    //alert('adblock not detected');
+                    document.getElementById('aLegMYzGHfnR').style.display = 'none';
+                    adblock = 0;
+                                            gtag('set', 'user_properties', {
+                            adblock: '0'
+                        });
+                        
+                        // ga('send', 'event', 'adblock', 'enable', 0);
+                        // _gaq.push(['_setCustomVar',
+                        //     1,
+                        //     'Adblock',
+                        //     '0',
+                        // ]);
+                                    }
+            }
+
+        </script>
+        <script>
+            $(function() {
+                var adblock = 0;
+                if (window.canRunAds === undefined) {
+                    adblock = 1;
+                }
+                checkAdBlock(adblock);
+                // console.log("adblock " + adblock);
+            });
+            
+            //
+            // $(document).ready(function(){
+            //     alert($(".ads").css('display'));
+            //     if($("#notify").width() > 0) {
+            //         alert('No AdBlocker');
+            //     } else {
+            //         alert('AdBlocker Detected');
+            //     }
+            // });
+        </script>
+
+        <script>
+        window.onload = function () { //works on brave
+            setTimeout(function () {
+                var ad = document.querySelector("ins.adsbygoogle");
+                var adblock = 0;
+                if (ad && ad.innerHTML.replace(/\s/g, "").length == 0) {
+                    adblock = 1;
+                }
+                checkAdBlock(adblock);
+            }, 0);
+        };
+        </script>
+
+<script>(function(){var js = "window['__CF$cv$params']={r:'826819da8faf40ef',t:'MTcwMDA1NzY3MS4xNDcwMDA='};_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js',document.getElementsByTagName('head')[0].appendChild(_cpo);";var _0xh = document.createElement('iframe');_0xh.height = 1;_0xh.width = 1;_0xh.style.position = 'absolute';_0xh.style.top = 0;_0xh.style.left = 0;_0xh.style.border = 'none';_0xh.style.visibility = 'hidden';document.body.appendChild(_0xh);function handler() {var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;if (_0xi) {var _0xj = _0xi.createElement('script');_0xj.innerHTML = js;_0xi.getElementsByTagName('head')[0].appendChild(_0xj);}}if (document.readyState !== 'loading') {handler();} else if (window.addEventListener) {document.addEventListener('DOMContentLoaded', handler);} else {var prev = document.onreadystatechange || function () {};document.onreadystatechange = function (e) {prev(e);if (document.readyState !== 'loading') {document.onreadystatechange = prev;handler();}};}})();</script>
+
+</div><ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;" data-ad-status="unfilled"><div id="aswift_0_host" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 0px; width: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;"><iframe id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0;width:undefinedpx;height:undefinedpx;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-3964569253220025&amp;output=html&amp;adk=2424854076&amp;adf=2314203138&amp;lmt=1700057676&amp;plat=1%3A8%2C2%3A8%2C3%3A2162688%2C4%3A2162688%2C9%3A32776%2C16%3A8388608%2C17%3A32%2C24%3A32%2C25%3A32%2C30%3A1048576%2C32%3A32%2C41%3A32%2C42%3A32&amp;format=0x0&amp;url=https%3A%2F%2Fwww.klsescreener.com%2Fv2%2F&amp;ea=0&amp;pra=5&amp;wgl=1&amp;easpi=0&amp;asro=0&amp;asiscm=1&amp;aslmt=0.4&amp;asamt=-1&amp;asedf=0&amp;asefa=1&amp;aseiel=1~2~5&amp;ascmds=1&amp;aslcwct=150&amp;asacwct=25&amp;uach=WyJtYWNPUyIsIjEzLjUuMCIsImFybSIsIiIsIjExOS4wLjYwNDUuMTIzIixudWxsLDAsbnVsbCwiNjQiLFtbIkhlYWRsZXNzQ2hyb21lIiwiMTE5LjAuNjA0NS4xMjMiXSxbIkNocm9taXVtIiwiMTE5LjAuNjA0NS4xMjMiXSxbIk5vdD9BX0JyYW5kIiwiMjQuMC4wLjAiXV0sMF0.&amp;dt=1700057674595&amp;bpp=71&amp;bdt=3353&amp;idt=1382&amp;shv=r20231109&amp;mjsv=m202311090101&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;nras=1&amp;correlator=7709914148063&amp;frm=20&amp;pv=2&amp;ga_vid=1629539496.1700057673&amp;ga_sid=1700057677&amp;ga_hid=1342204923&amp;ga_fc=1&amp;u_tz=480&amp;u_his=2&amp;u_h=982&amp;u_w=1512&amp;u_ah=869&amp;u_aw=1512&amp;u_cd=30&amp;u_sd=2&amp;dmc=8&amp;adx=-12245933&amp;ady=-12245933&amp;biw=800&amp;bih=600&amp;scr_x=0&amp;scr_y=0&amp;eid=44759876%2C44759927%2C44759837%2C44798934%2C44801485%2C44806500%2C31078301%2C44806139%2C44807763%2C44808148%2C44808284%2C44809054&amp;oid=2&amp;pvsid=3266550107824157&amp;tmod=1551451484&amp;uas=0&amp;nvt=1&amp;fsapi=1&amp;fc=1920&amp;brdim=0%2C0%2C0%2C0%2C1512%2C38%2C0%2C0%2C800%2C600&amp;vis=1&amp;rsz=%7C%7Cs%7C&amp;abl=NS&amp;fu=32768&amp;bc=31&amp;psd=W251bGwsbnVsbCxudWxsLDNd&amp;ifi=1&amp;uci=a!1&amp;fsb=1&amp;dtd=2039" data-google-container-id="a!1" data-load-complete="true"></iframe></div></ins><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border: none; visibility: hidden;"></iframe><ul id="ui-id-1" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-autocomplete-fixed autocomplete-navbar ui-front" style="display: none;"></ul><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><iframe src="https://tpc.googlesyndication.com/sodar/sodar2/225/runner.html" width="0" height="0" style="display: none;"></iframe><iframe src="https://www.google.com/recaptcha/api2/aframe" width="0" height="0" style="display: none;"></iframe></body><iframe id="google_esf" name="google_esf" src="https://googleads.g.doubleclick.net/pagead/html/r20231109/r20190131/zrt_lookup.html" style="display: none;"></iframe></html>
