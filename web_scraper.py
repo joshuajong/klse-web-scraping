@@ -2,15 +2,33 @@ import pdb
 import requests
 from bs4 import BeautifulSoup
 
-# Make a request to the website
-url = 'https://klse.i3investor.com/servlets/stk/1155.jsp'
-pdb.set_trace()
-response = requests.get(url)
+import time
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 
-# Parse the HTML content of the page
-soup = BeautifulSoup(response.text, 'html.parser')
+def construct_url(stock_code, stock_name):
+  return 'https://www.klsescreener.com/v2/stocks/view/' + str(stock_code) + '/' + stock_name + '.jsp'
 
-last_price = soup.find('p', text='Last Price').find_next('strong').get_text()
+def get_webpage(link):
+    # Use headless mode to avoid opening a visible browser window
+    chrome_options = Options()
+    chrome_options.add_argument('--headless')
+    driver = webdriver.Chrome(options=chrome_options)
 
-# Extract data
-print("Last price is: RM" + last_price)
+    # Load the page
+    driver.get(link)
+
+    # Give the JavaScript on the page some time to execute
+    time.sleep(5)
+
+    # Get the page content after JavaScript has executed
+    html = driver.page_source
+
+    # Close the browser
+    driver.quit()
+
+    with open("allPriceTarget.html", "w") as myfile:
+      myfile.write(html)
+
+if __name__ == "__main__":
+  get_webpage('https://www.klsescreener.com/v2/')
